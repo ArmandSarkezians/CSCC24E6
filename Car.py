@@ -4,7 +4,14 @@ class Car:
         self.model = model
         self.year = year
 
+    def __add__(self, other):
+        return self.year + other.year
 
-car1 = Car("Volkswagen", "Jetta", "2015")
-car2 = Car("Ford", "Fiesta", "2016")
+    def __sub__(self, other):
+        return self.year - other.year
+
+
+car1 = Car("Volkswagen", "Jetta", 2015)
+car2 = Car("Ford", "Fiesta", 2016)
 print(car1 + car2)
+print(car1 - car2)
