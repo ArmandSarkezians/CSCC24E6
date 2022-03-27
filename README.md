@@ -9,7 +9,7 @@
     - [Addition and Subtraction](#addition-and-subtraction)
     - [The rest](#the-rest)
     - [Connection to Class Materials](#connection-to-class-materials)
-  - [Overlaoading Comparison Operators](#overlaoading-comparison-operators)
+  - [Overloading Comparison Operators](#overloading-comparison-operators)
   - [Conclusion](#conclusion)
 
 ## Introduction
@@ -77,7 +77,7 @@ class Car:
         self.year = year
 
     def __add__ (self, other):
-        return Car(self.make, self.model, self.year + other.year)
+        return self.year + other.year
 
 car1 = Car("Volkswagen", "Jetta", 2015)
 car2 = Car("Ford", "Fiesta", 2016)
@@ -124,28 +124,17 @@ Now that we have looked into addition and subtraction in detail, instead of repe
 Additional special functions:
 
 - Multiplication = `__mul__`
-  - `__mul__` takes two parameters, `self` and `other`. The `self` parameter is the object that is being multiplied, and the `other` parameter is the object that is being multiplied. The function must return the result of the operation.  
-
 - Division = `__truediv__`
-  - `__truediv__` takes two parameters, `self` and `other`. The `self` parameter is the object that is being divided, and the `other` parameter is the object that is being divided. The function must return the result of the operation.
-
 - Power = `__pow__`
-  - `__pow__` takes two parameters, `self` and `other`. The `self` parameter is the object that is being raised to a power, and the `other` parameter is the object that is being raised to a power. The function must return the result of the operation.
-
 - Floor Division = `__floordiv__`
-  - `__floordiv__` takes two parameters, `self` and `other`. The `self` parameter is the object that is being divided, and the `other` parameter is the object that is being divided. The function must return the result of the operation.
-
 - Remainder = `__mod__`
-  - `__mod__` takes two parameters, `self` and `other`. The `self` parameter is the object that is being divided, and the `other` parameter is the object that is being divided. The function must return the result of the operation.
-
 - Bitwise left shift = `__lshift__`
-  - `__lshift__` takes two parameters, `self` and `other`. The `self` parameter is the object that is being left shifted, and the `other` parameter is the object that is being left shifted. The function must return the result of the operation.
-
 - Bitwise right shift = `__rshift__`
-  - `__rshift__` takes two parameters, `self` and `other`. The `self` parameter is the object that is being right shifted, and the `other` parameter is the object that is being right shifted. The function must return the result of the operation.
+
+All of these special functions require takes two parameters, `self` and `other`. They apply their respective operations on these two objects. All of these functions are binary operators, and work left associatively for non binary operations.
 
 ### Connection to Class Materials
 
-## Overlaoading Comparison Operators
+## Overloading Comparison Operators
 
 ## Conclusion
