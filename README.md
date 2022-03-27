@@ -7,7 +7,7 @@
     - [Preliminaries](#preliminaries)
   - [Overloading Arithmetic Operators](#overloading-arithmetic-operators)
     - [Addition and Subtraction](#addition-and-subtraction)
-    - [The rest](#the-rest)
+    - [Other Functions](#other-functions)
     - [Connection to Class Materials](#connection-to-class-materials)
   - [Overloading Comparison Operators](#overloading-comparison-operators)
   - [Conclusion](#conclusion)
@@ -117,9 +117,9 @@ The following snippet outputs:
 
 Overloading arithmetic operators in Python is easy, and I'm sure none of you will have any trouble with it. =)
 
-### The rest
+### Other Functions
 
-Now that we have looked into addition and subtraction in detail, instead of repeating the same time 50 times, I will list the special functions needed for overloading arithmetic operators in Python. Some of the functions may require a little clarification, which I will try to provide. In any case, if you are confused to need extra information, please look to the [Python Official Documentation](https://docs.python.org/3/reference/datamodel.html#special-method-names) for more information.
+Now that we have looked into addition and subtraction in detail, instead of repeating the same thing 50 times, I will list the special functions needed for overloading arithmetic operators in Python. Some of the functions may require a little clarification, which I will try to provide in a small blerb at the bottom of the list. In any case, if you are confused or need extra information, please look to the [Python Official Documentation](https://docs.python.org/3/reference/datamodel.html#special-method-names) for more information.
 
 Additional special functions:
 
