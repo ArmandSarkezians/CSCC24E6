@@ -45,19 +45,19 @@ This error states that two objects of type `Car` cannot be added together. This 
 
 ### Connection to Course Materials
 
-In order to clear up any confusion that these classes may bring to someone who is new to Python, we will make a clear connection to our course materials.Specifically, we will compare Python types to those found in Haskell. In Python, every new type defined is a class, in Haskell, types can be defined as data types. An example of the same Car class in Haskell is shown below, using a data type:
+In order to clear up any confusion that these classes may bring to someone who is new to Python, we will make a clear connection to our course materials. Specifically, we will compare Python types to those found in Haskell. In Python, every new type defined is a class, in Haskell, types can be defined as data types. An example of the same Car class in Haskell is shown below, using a data type:
 
 ```haskell
 data Car = Car { make :: String, model :: String, year :: Int }
 ```
 
-Both of these data types include the same parameters, the stirng `make`,  the string `model`, and the integer `year`. The difference between these types, aside from syntax, comes from their instantiation. For the class, instantiation of a type can be altered, using the `__init__` method. For the data type, instantiation can not altered.
+Both of these data types include the same parameters, the string `make`,  the string `model`, and the integer `year`. The difference between these types, aside from syntax, comes from their instantiation. For the class, instantiation of a type can be altered, using the `__init__` method. For the data type, instantiation can not altered.
 
-Essentially, in Python and Haskell, types are created to more  easily identify grouped together components. A single car object is more easy to work with then three seperate data types (String, String, Int).
+Essentially, in Python and Haskell, types are created to more easily identify grouped together components. A single car object is easier to work with than three seperate data types (String, String, Int).
 
 ### Preliminaries
 
-Before we talk about operator overloading in Python, we must first talk about why I denoted the function `__init__` using underscores. This is called a 'special function' in python.These functions can get called in a variety of ways. For example, when we create a new instance of the class, the `__init__` function is called. We can also call the `__init__` function from within the class itself.
+Before we talk about operator overloading in Python, we must first talk about why I denoted the function `__init__` using underscores. This is called a 'special function' in python. These functions can get called in a variety of ways. For example, when we create a new instance of the class, the `__init__` function is called. We can also call the `__init__` function from within the class itself.
 
 These functions are vital for operator overloading. They are used to define how the operators `+`, `-`, `*`, and `/` work with the objects of the class. In the following sections, we will discuss how these operators can be overloaded in python.
 
