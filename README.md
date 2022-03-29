@@ -26,9 +26,9 @@ Python allows coders to develop their own types. These types are called classes.
 ```python
 class Car:
     def __init__ (self, make, model, year):
-        self.make = make
-        self.model = model
-        self.year = year
+      self.make = make
+      self.model = model
+      self.year = year
 
 car1 = Car("Volkswagen", "Jetta", 2015)
 car2 = Car("Ford", "Fiesta", 2016)
@@ -75,12 +75,12 @@ In order to overload the `+` and `-` operators, we must define a function with t
 ```python
 class Car:
     def __init__ (self, make, model, year):
-        self.make = make
-        self.model = model
-        self.year = year
+      self.make = make
+      self.model = model
+      self.year = year
 
     def __add__ (self, other):
-        return self.year + other.year
+      return self.year + other.year
 
 car1 = Car("Volkswagen", "Jetta", 2015)
 car2 = Car("Ford", "Fiesta", 2016)
@@ -100,12 +100,12 @@ A similar concept is used for the `-` operator. The `__sub__` special function i
 ```python
 class Car:
     def __init__ (self, make, model, year):
-        self.make = make
-        self.model = model
-        self.year = year
+      self.make = make
+      self.model = model
+      self.year = year
 
     def __sub__ (self, other):
-        return self.year - other.year
+      return self.year - other.year
 
 car1 = Car("Volkswagen", "Jetta", 2015)
 car2 = Car("Ford", "Fiesta", 2016)
@@ -148,11 +148,9 @@ instance (Num make, Num model, Num year) => Num (Car make model year) where
   Car (make1, model1, year1) - Car (make2, model2, year2) = Car (make1, model1, year1 - year2)
   Car (make1, model1, year1) * Car (make2, model2, year2) = Car (make1, model1, year1 * year2)
   abs (Car (make, model, year)) = Car (make, model, abs year)
-  signum (Car (make, model, year)) = Car (make, model, signum year)
-  fromInteger i = Car (fromInteger i, fromInteger i, fromInteger i)
 ```
 
-The following code bit overloads addition, multiplication, subtraction, absolutes, signum, and fromInteger in Haskell. After describing how to overload comparison operators in Python, I will show the connection between this bit of code, and that of which we have seen in class (overloading Eq and Show).
+The following code bit overloads addition, multiplication, subtraction, and absolutes in Haskell. After describing how to overload comparison operators in Python, I will show the connection between this bit of code, and that of which we have seen in class (overloading Eq and Show).
 
 ## Overloading Comparison Operators
 
@@ -165,12 +163,12 @@ Like addition and subtraction, special functions must be used here. In order to 
 ```python
 class Car:
     def __init__ (self, make, model, year):
-        self.make = make
-        self.model = model
-        self.year = year
+      self.make = make
+      self.model = model
+      self.year = year
 
     def __eq__ (self, other):
-        return self.year == other.year
+      return self.year == other.year
 ```
 
 This code blurb defines equality between two cars. If two cars are made on the same year, I can say that they are equal. Again, this equality does not need to be logically true. You can define this class to do whatever you want it to do. If your heart desired, you could write a `__eq__` function that always returns true, or always prints "Hello World".
@@ -180,9 +178,9 @@ There is a similar way to overload the string representation of an object. If we
 ```python
 class Car:
     def __init__ (self, make, model, year):
-        self.make = make
-        self.model = model
-        self.year = year
+      self.make = make
+      self.model = model
+      self.year = year
 
 car1 = Car("Ford", "Fiesta", 2016)
 print(car1)
@@ -199,12 +197,12 @@ We need to create the function `__str__` in order to overload the string represe
 ```python
 class Car:
     def __init__ (self, make, model, year):
-        self.make = make
-        self.model = model
-        self.year = year
+      self.make = make
+      self.model = model
+      self.year = year
 
     def __str__ (self):
-        return "{} {} {}".format(self.make, self.model, self.year)
+      return "{} {} {}".format(self.make, self.model, self.year)
 
 car1 = Car("Ford", "Fiesta", 2016)
 print(car1)
