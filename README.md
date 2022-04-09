@@ -93,7 +93,7 @@ The following snippet outputs:
 4031
 ```
 
-Instead of returning an error, the addition of the `__add__` function will return a new instance of the class. When two instances of a class are added, Python looks for a `__add__` function. If one is found, it is called. If no `__add__` function is found, Python will return an error. Creating this function in the class you defined then allows you to overload the `+` operator, to whatever you want (it does not need to be addition, you can overload the `__add__` function to create a whole Tetris mini-game if you wanted to).
+Instead of returning an error, the addition of the `__add__` function will return an integer. When two instances of a class are added, Python looks for a `__add__` function. If one is found, it is called. If no `__add__` function is found, Python will return an error. Creating this function in the class you defined then allows you to overload the `+` operator, to whatever you want (it does not need to be addition, you can overload the `__add__` function to create a whole Tetris mini-game if you wanted to).
 
 A similar concept is used for the `-` operator. The `__sub__` special function is defined, and used to overload the `-` operator. The `__sub__` function takes two parameters, `self` and `other`. The `self` parameter is the object that is being subtracted from, and the `other` parameter is the object that is being subtracted. The function must return the result of the operation. An example of this is shown below.
 
@@ -147,10 +147,11 @@ instance (Num make, Num model, Num year) => Num (Car make model year) where
   Car (make1, model1, year1) + Car (make2, model2, year2) = Car (make1, model1, year1 + year2)
   Car (make1, model1, year1) - Car (make2, model2, year2) = Car (make1, model1, year1 - year2)
   Car (make1, model1, year1) * Car (make2, model2, year2) = Car (make1, model1, year1 * year2)
+  Car (make1, model1, year1) / Car (make2, model2, year2) = Car (make1, model1, year1 / year2)
   abs (Car (make, model, year)) = Car (make, model, abs year)
 ```
 
-The following code bit overloads addition, multiplication, subtraction, and absolutes in Haskell. After describing how to overload comparison operators in Python, I will show the connection between this bit of code, and that of which we have seen in class (overloading Eq and Show).
+The following code bit overloads addition, multiplication, division, subtraction, and absolutes in Haskell. After describing how to overload comparison operators in Python, I will show the connection between this bit of code, and that of which we have seen in class (overloading Eq and Show).
 
 ## Overloading Comparison Operators
 
@@ -171,7 +172,7 @@ class Car:
       return self.year == other.year
 ```
 
-This code blurb defines equality between two cars. If two cars are made on the same year, I can say that they are equal. Again, this equality does not need to be logically true. You can define this class to do whatever you want it to do. If your heart desired, you could write a `__eq__` function that always returns true, or always prints "Hello World".
+This code blurb defines equality between two cars. If two cars are made on the same year, I can say that they are equal. Again, this equality does not need to be logically true. You can define this class to do whatever you want it to do. If your heart desired, you could write a `__eq__` function that always returns true.
 
 There is a similar way to overload the string representation of an object. If we were to create two cars without the overloaded string representation, Python would output the address of the object, as such:
 
@@ -233,7 +234,6 @@ Some key ideas to note:
 
 - In both Python and Haskell, you do not need to overload the 'not equals' operators. You, however, can if you want to. Both of these functions can either have their own logic, or be defined in terms of the 'equals' operator. It is up to you.
 - Haskell needs a class or instance of Eq in order to overload the 'equals' operator, however, Python needs the function to be defined in a specific class. This means that in Haskell, you could have all of your equals operators defined in one file, but in Python, you would need to define them in a separate file, specifically in the class that you want them to be defined in.
-
 
 ### Additional Comparison Operators
 
