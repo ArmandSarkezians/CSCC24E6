@@ -14,6 +14,7 @@
     - [Comparison to Class Materials](#comparison-to-class-materials)
     - [Additional Comparison Operators](#additional-comparison-operators)
   - [Conclusion](#conclusion)
+    - [References](#references)
 
 ## Introduction
 
@@ -251,3 +252,7 @@ Some addition comparison operators are shown below. These have near identical sy
 ## Conclusion
 
 We are now done. Congratulations! You have completed our course on Python Operator Overloading! We hope you enjoyed this document, we have enjoyed writing it. If you have any questions, learn how to google or read documentation. Thanks for reading!
+
+### References
+
+We only used the official Python documentation for this lesson. Find the full documentation [here](https://docs.python.org/3/reference/datamodel.html#special-method-names).
